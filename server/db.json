@@ -2,9 +2,21 @@
   "users": [
     {
       "email": "mahfuz@gmail.com",
-      "password": "$2a$10$KveMc2RI3X/uXmm3YUZGZ.NklWLVUT0iKDWu4ggkuBU0iCk3p.Qwy",
+      "password": "$2a$10$ZRkljYCiWAhmdEMjge4pkOV/JbdxwwjQU.AWR8WY.CPLehfrZvIae",
       "name": "Mahfuz",
       "id": 1
+    },
+    {
+      "email": "hasibul1120021@gmail.com",
+      "password": "$2a$10$UsGwp6aELJZHVj3wv2Rk3uErdjbL4mWySmpd.6H9pKOdvk4WqqmoC",
+      "name": "Mahfuz Alam",
+      "id": 2
+    },
+    {
+      "email": "hasibul112002@gmail.com",
+      "password": "$2a$10$9xW46seKG9ZOT9YFIOZzLuMftP/iWkE5mDRNZC2rfihtV/ntBMVz2",
+      "name": "Mahfuz Alam",
+      "id": 3
     }
   ],
   "conversations": [
