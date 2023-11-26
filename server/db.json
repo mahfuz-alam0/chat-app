@@ -76,6 +76,25 @@
       "message": "Hello Sumit vai, how are you?",
       "timestamp": 1662553558840,
       "id": 3
+    },
+    {
+      "participants": "mahfuz@gmail.com-sumit@learnwithsumit.com",
+      "users": [
+        {
+          "email": "mahfuz@gmail.com",
+          "name": "Mahfuz Alam",
+          "id": 6
+        },
+        {
+          "email": "sumit@learnwithsumit.com",
+          "password": "$2a$10$tGMlJhQmAnx7f4cIVY55FOtIRV91wjRwBhdpaANPoslku3P/aAjPK",
+          "name": "Sumit Saha",
+          "id": 1
+        }
+      ],
+      "message": "have you checked my mail",
+      "timestamp": 1700994775290,
+      "id": 4
     }
   ],
   "messages": [
