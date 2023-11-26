@@ -20,12 +20,37 @@
     },
     {
       "email": "mahfuz@gmail.com",
-      "password": "$2a$10$8K3P.j1QvxuAdtSSHS1EMezT3xK4TeyDVdlknrpcpRGGCgkxEg/6a",
+      "password": "$2a$10$krhm0mFXqHF11fA86LHDn.7KE9z8aaN5NTHtXfPSLGnf3nIPydJO.",
       "name": "Mahfuz Alam",
       "id": 4
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "$2a$10$.O1ZJPP6FKr/03jyeQLbIeIL/YpHLE92TNxoWRihTrnUsh/s4mkZ.",
+      "name": "test",
+      "id": 5
     }
   ],
   "conversations": [
+    {
+      "participants": "sumit@learnwithsumit.com-saad@learnwithsumit.com",
+      "users": [
+        {
+          "email": "sumit@learnwithsumit.com",
+          "name": "Sumit Saha",
+          "id": 1
+        },
+        {
+          "email": "saad@learnwithsumit.com",
+          "password": "$2a$10$DVGOgchZrtvb1w6Pj.B0D.DXmHmoTsdy3oXfwF.02kE/pzJ7jyHqy",
+          "name": "Saad Hasan",
+          "id": 3
+        }
+      ],
+      "message": "Hello world Redux Bangladesh",
+      "timestamp": 1662631986753,
+      "id": 1
+    },
     {
       "participants": "mahfuz@gmail.com-sumit@learnwithsumit.com",
       "users": [
@@ -41,20 +66,170 @@
           "id": 1
         }
       ],
-      "message": "Hello How are you",
-      "timestamp": 1700996574360,
-      "id": 1
+      "message": "hi",
+      "timestamp": 1701010687093,
+      "id": 2
     },
     {
-      "participants": "mahfuz@gmail.com,sumit@learnwithsumit.com",
-      "message": "ki koren vai ",
-      "timestamp": 1700999040942,
-      "id": 2
+      "participants": "mahfuz@gmail.com-akash@learnwithsumit.com",
+      "users": [
+        {
+          "email": "mahfuz@gmail.com",
+          "name": "Mahfuz Alam",
+          "id": 4
+        },
+        {
+          "email": "akash@learnwithsumit.com",
+          "password": "$2a$10$Oc6jXnK6/pbSqmkngo/b.OhsU3JRf4OU1h9QwIoqz8ZUpG/hgHq72",
+          "name": "Akash Ahmed",
+          "id": 2
+        }
+      ],
+      "message": "hi",
+      "timestamp": 1701010707556,
+      "id": 3
+    },
+    {
+      "participants": "test@gmail.com-mahfuz@gmail.com",
+      "users": [
+        {
+          "email": "test@gmail.com",
+          "name": "test",
+          "id": 5
+        },
+        {
+          "email": "mahfuz@gmail.com",
+          "name": "Mahfuz Alam",
+          "id": 4
+        }
+      ],
+      "message": "hi",
+      "timestamp": 1701011154844,
+      "id": 4
     }
   ],
   "messages": [
     {
       "conversationId": 1,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit Saha",
+        "id": 1
+      },
+      "receiver": {
+        "email": "saad@learnwithsumit.com",
+        "password": "$2a$10$DVGOgchZrtvb1w6Pj.B0D.DXmHmoTsdy3oXfwF.02kE/pzJ7jyHqy",
+        "name": "Saad Hasan",
+        "id": 3
+      },
+      "message": "Hello",
+      "timestamp": 1662628206226,
+      "id": 1
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit Saha",
+        "id": 1
+      },
+      "receiver": {
+        "email": "saad@learnwithsumit.com",
+        "password": "$2a$10$DVGOgchZrtvb1w6Pj.B0D.DXmHmoTsdy3oXfwF.02kE/pzJ7jyHqy",
+        "name": "Saad Hasan",
+        "id": 3
+      },
+      "message": "Bye",
+      "timestamp": 1662628224667,
+      "id": 2
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit Saha",
+        "id": 1
+      },
+      "receiver": {
+        "email": "saad@learnwithsumit.com",
+        "password": "$2a$10$DVGOgchZrtvb1w6Pj.B0D.DXmHmoTsdy3oXfwF.02kE/pzJ7jyHqy",
+        "name": "Saad Hasan",
+        "id": 3
+      },
+      "message": "Hello hi bye bye",
+      "timestamp": 1662631611651,
+      "id": 3
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit Saha",
+        "id": 1
+      },
+      "receiver": {
+        "email": "saad@learnwithsumit.com",
+        "password": "$2a$10$DVGOgchZrtvb1w6Pj.B0D.DXmHmoTsdy3oXfwF.02kE/pzJ7jyHqy",
+        "name": "Saad Hasan",
+        "id": 3
+      },
+      "message": "Hello",
+      "timestamp": 1662631817658,
+      "id": 4
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit Saha",
+        "id": 1
+      },
+      "receiver": {
+        "email": "saad@learnwithsumit.com",
+        "password": "$2a$10$DVGOgchZrtvb1w6Pj.B0D.DXmHmoTsdy3oXfwF.02kE/pzJ7jyHqy",
+        "name": "Saad Hasan",
+        "id": 3
+      },
+      "message": "test",
+      "timestamp": 1662631825864,
+      "id": 5
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit Saha",
+        "id": 1
+      },
+      "receiver": {
+        "email": "saad@learnwithsumit.com",
+        "password": "$2a$10$DVGOgchZrtvb1w6Pj.B0D.DXmHmoTsdy3oXfwF.02kE/pzJ7jyHqy",
+        "name": "Saad Hasan",
+        "id": 3
+      },
+      "message": "Lorem ipsum dolor sit amet ... hello world Bangladesh",
+      "timestamp": 1662631959796,
+      "id": 6
+    },
+    {
+      "conversationId": 1,
+      "sender": {
+        "email": "sumit@learnwithsumit.com",
+        "name": "Sumit Saha",
+        "id": 1
+      },
+      "receiver": {
+        "email": "saad@learnwithsumit.com",
+        "password": "$2a$10$DVGOgchZrtvb1w6Pj.B0D.DXmHmoTsdy3oXfwF.02kE/pzJ7jyHqy",
+        "name": "Saad Hasan",
+        "id": 3
+      },
+      "message": "Hello world Redux Bangladesh",
+      "timestamp": 1662631986753,
+      "id": 7
+    },
+    {
+      "conversationId": 2,
       "sender": {
         "email": "mahfuz@gmail.com",
         "name": "Mahfuz Alam",
@@ -66,9 +241,123 @@
         "name": "Sumit Saha",
         "id": 1
       },
-      "message": "Hello How are you",
-      "timestamp": 1700996574360,
-      "id": 1
+      "message": "hi",
+      "timestamp": 1701010687093,
+      "id": 8
+    },
+    {
+      "conversationId": 3,
+      "sender": {
+        "email": "mahfuz@gmail.com",
+        "name": "Mahfuz Alam",
+        "id": 4
+      },
+      "receiver": {
+        "email": "akash@learnwithsumit.com",
+        "password": "$2a$10$Oc6jXnK6/pbSqmkngo/b.OhsU3JRf4OU1h9QwIoqz8ZUpG/hgHq72",
+        "name": "Akash Ahmed",
+        "id": 2
+      },
+      "message": "hi",
+      "timestamp": 1701010707556,
+      "id": 9
+    },
+    {
+      "conversationId": 4,
+      "sender": {
+        "email": "test@gmail.com",
+        "name": "test",
+        "id": 5
+      },
+      "receiver": {
+        "email": "mahfuz@gmail.com",
+        "password": "$2a$10$krhm0mFXqHF11fA86LHDn.7KE9z8aaN5NTHtXfPSLGnf3nIPydJO.",
+        "name": "Mahfuz Alam",
+        "id": 4
+      },
+      "message": "hi",
+      "timestamp": 1701010781884,
+      "id": 10
+    },
+    {
+      "conversationId": 4,
+      "sender": {
+        "email": "mahfuz@gmail.com",
+        "name": "Mahfuz Alam",
+        "id": 4
+      },
+      "receiver": {
+        "email": "test@gmail.com",
+        "name": "test",
+        "id": 5
+      },
+      "message": "hello",
+      "timestamp": 1701010805469,
+      "id": 11
+    },
+    {
+      "conversationId": 4,
+      "sender": {
+        "email": "mahfuz@gmail.com",
+        "name": "Mahfuz Alam",
+        "id": 4
+      },
+      "receiver": {
+        "email": "test@gmail.com",
+        "name": "test",
+        "id": 5
+      },
+      "message": "kemon aso",
+      "timestamp": 1701010831581,
+      "id": 12
+    },
+    {
+      "conversationId": 4,
+      "sender": {
+        "email": "test@gmail.com",
+        "name": "test",
+        "id": 5
+      },
+      "receiver": {
+        "email": "mahfuz@gmail.com",
+        "name": "Mahfuz Alam",
+        "id": 4
+      },
+      "message": "valo asi apne kemon asen",
+      "timestamp": 1701010848931,
+      "id": 13
+    },
+    {
+      "conversationId": 4,
+      "sender": {
+        "email": "mahfuz@gmail.com",
+        "name": "Mahfuz Alam",
+        "id": 4
+      },
+      "receiver": {
+        "email": "test@gmail.com",
+        "name": "test",
+        "id": 5
+      },
+      "message": "hello",
+      "timestamp": 1701011149516,
+      "id": 14
+    },
+    {
+      "conversationId": 4,
+      "sender": {
+        "email": "test@gmail.com",
+        "name": "test",
+        "id": 5
+      },
+      "receiver": {
+        "email": "mahfuz@gmail.com",
+        "name": "Mahfuz Alam",
+        "id": 4
+      },
+      "message": "hi",
+      "timestamp": 1701011154844,
+      "id": 15
     }
   ]
 }
