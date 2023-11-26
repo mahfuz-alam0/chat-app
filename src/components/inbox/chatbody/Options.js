@@ -1,41 +1,43 @@
 import { useEffect, useState } from "react";
-import { useAddConversationMutation } from "../../../features/conversations/conversationsApi";
 import { useSelector } from "react-redux";
+import { useEditConversationMutation } from "../../../features/conversations/conversationsApi";
 
-export default function Options({info}) {
-
+export default function Options({ info }) {
     const [message, setMessage] = useState("");
-
-    const { user: loggedInUser } = useSelector((state) => state.auth) || {};
-
-    const perticipantEmail = info.receiver.email !== loggedInUser.email ? info.receiver : info.sender;
-
-    const [addConversation, { isSuccess}] =
-    useAddConversationMutation();
+    const [editConversation, { isSuccess }] = useEditConversationMutation();
 
     useEffect(() => {
         if (isSuccess) {
             setMessage("");
         }
     }, [isSuccess]);
+    const { user: loggedInUser } = useSelector((state) => state.auth);
+
+    const participantUser =
+        info.receiver.email !== loggedInUser.email
+            ? info.receiver
+            : info.sender;
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        addConversation({
+        // add conversation
+        editConversation({
+            id: info?.conversationId,
             sender: loggedInUser?.email,
             data: {
-                participants: `${loggedInUser?.email},${perticipantEmail.email}`,
+                participants: `${loggedInUser.email}-${participantUser.email}`,
+                users: [loggedInUser, participantUser],
                 message,
                 timestamp: new Date().getTime(),
             },
         });
-
-        console.log(message);
     };
 
     return (
-        <form onSubmit={handleSubmit} className="flex items-center justify-between w-full p-3 border-t border-gray-300">
+        <form
+            className="flex items-center justify-between w-full p-3 border-t border-gray-300"
+            onSubmit={handleSubmit}
+        >
             <input
                 type="text"
                 placeholder="Message"

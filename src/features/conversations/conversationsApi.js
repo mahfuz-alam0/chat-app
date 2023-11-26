@@ -48,27 +48,47 @@ export const conversationsApi = apiSlice.injectEndpoints({
                 body: data,
             }),
             async onQueryStarted(arg, { queryFulfilled, dispatch }) {
-                const conversation = await queryFulfilled;
-                if (conversation?.data?.id) {
-                    // silent entry to message table
-                    const users = arg.data.users;
-                    const senderUser = users.find(
-                        (user) => user.email === arg.sender
-                    );
-                    const receiverUser = users.find(
-                        (user) => user.email !== arg.sender
-                    );
 
-                    dispatch(
-                        messagesApi.endpoints.addMessage.initiate({
-                            conversationId: conversation?.data?.id,
-                            sender: senderUser,
-                            receiver: receiverUser,
-                            message: arg.data.message,
-                            timestamp: arg.data.timestamp,
+                // optimastice update start
+                const patchResult1 = dispatch(
+                    apiSlice.util.updateQueryData("getConversations",
+                        arg.sender,
+                        (draft) => {
+                            const draftCon = draft.find((conversation) => conversation.id == arg.id);
+                            draftCon.message = arg.data.message;
+                            draftCon.timestamp = arg.data.timestamp;
                         })
-                    );
+                )
+                // optimastice update end 
+
+                try {
+                    const conversation = await queryFulfilled;
+                    if (conversation?.data?.id) {
+                        // silent entry to message table
+                        const users = arg.data.users;
+                        const senderUser = users.find(
+                            (user) => user.email === arg.sender
+                        );
+                        const receiverUser = users.find(
+                            (user) => user.email !== arg.sender
+                        );
+
+                        dispatch(
+                            messagesApi.endpoints.addMessage.initiate({
+                                conversationId: conversation?.data?.id,
+                                sender: senderUser,
+                                receiver: receiverUser,
+                                message: arg.data.message,
+                                timestamp: arg.data.timestamp,
+                            })
+                        );
+                    }
+                } catch (err) { 
+                    // rollback start
+                    patchResult1.undo();
+                    // rollback end
                 }
+
             },
         }),
     }),
