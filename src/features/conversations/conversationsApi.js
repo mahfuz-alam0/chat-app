@@ -45,7 +45,7 @@ export const conversationsApi = apiSlice.injectEndpoints({
                             }
                         });
                     });
-                } catch (err) { }
+                } catch (err) {}
 
                 await cacheEntryRemoved;
                 socket.close();
@@ -76,7 +76,7 @@ export const conversationsApi = apiSlice.injectEndpoints({
                         );
                         // update messages cache pessimistically end
                     }
-                } catch (err) { }
+                } catch (err) {}
             },
         }),
         getConversation: builder.query({
